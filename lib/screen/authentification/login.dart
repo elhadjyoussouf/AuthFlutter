@@ -2,6 +2,8 @@ import 'package:article/widgets/customTextField.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
+  final Function visible;
+  Login(this.visible);
   @override
   _LoginState createState() => _LoginState();
 }
