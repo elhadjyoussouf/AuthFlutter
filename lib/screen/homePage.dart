@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 
 // ignore: unused_element
 class _HomePageState extends State<HomePage> {
-  bool visible = false;
+  bool visible = true;
   toggle() {
     setState(() {
       visible = !visible;

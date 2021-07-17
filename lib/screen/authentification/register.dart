@@ -2,7 +2,8 @@ import 'package:article/widgets/customTextField.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
-  final Function visible;
+  //final Function visible;
+  final Function()? visible;
   Register(this.visible); //Parameter bool for register onclick
   @override
   _RegisterState createState() => _RegisterState();
@@ -16,7 +17,7 @@ class _RegisterState extends State<Register> {
   CustomTextField passText = new CustomTextField(
       title: "Password", placeholder: "***********", ispass: true);
   CustomTextField confirmPassText = new CustomTextField(
-      title: "Password", placeholder: "***********", ispass: true);
+      title: "Confirm Password", placeholder: "***********", ispass: true);
   // ignore: unused_field
   final _key = GlobalKey<FormState>();
   @override
@@ -77,7 +78,7 @@ class _RegisterState extends State<Register> {
                         Text('Avez-vous un compte? '),
                         // ignore: deprecated_member_use
                         FlatButton(
-                            onPressed:  onPressed: () {},
+                            onPressed: widget.visible,
                             child: Text(
                               "Login",
                               style: TextStyle(color: Colors.redAccent),

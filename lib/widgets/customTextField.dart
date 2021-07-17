@@ -4,7 +4,7 @@ class CustomTextField {
   final String title;
   final String placeholder;
   final bool ispass;
-  String err;
+  String err; 
   String _value = "";
   CustomTextField(
       {this.title = "",

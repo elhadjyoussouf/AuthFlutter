@@ -2,7 +2,8 @@ import 'package:article/widgets/customTextField.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
-  final Function visible;
+  //final Function visible;
+  final Function()? visible;
   Login(this.visible);
   @override
   _LoginState createState() => _LoginState();
@@ -71,7 +72,7 @@ class _LoginState extends State<Login> {
                         Text('Avez-vous un compte? '),
                         // ignore: deprecated_member_use
                         FlatButton(
-                            onPressed: () {},
+                            onPressed: widget.visible,
                             child: Text(
                               "Register",
                               style: TextStyle(color: Colors.redAccent),
